@@ -1,0 +1,32 @@
+{
+  "name": "@changes-watch/upgrade-verdict",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Upgrade verdicts for npm dependency changes in pull requests, powered by Changes.Watch.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/action.ts -o dist --license licenses.txt",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@actions/core": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@vercel/ncc": "^0.38.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChangesWatch/upgrade-verdict.git"
+  },
+  "homepage": "https://www.changes.watch/packages/how-verdicts-work"
+}
